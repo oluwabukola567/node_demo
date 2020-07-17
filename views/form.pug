@@ -1,0 +1,41 @@
+doctype html
+html
+head
+
+title  Registration form
+link(rel='stylesheet', href='/css/bootstrap.min.css')
+link(rel='stylesheet', href='/css/styles.css')
+
+body
+    div.container.listing-reg
+
+h1 My Awesome App
+block content
+ -data = data || {}
+
+form(action="." method="POST" class='form-registration')
+    label(for = "name") Name:
+    input(
+        type = "text"
+        id = "name"
+        name = "name"
+        class = 'form-control'
+        value = data.name
+        required
+    )
+    label(for = "email") Email:
+    input(
+        type = "email"
+        id = "email"
+        name = "email"
+        class = 'form-control'
+        value = data.email
+        required
+    )
+    br
+    input(
+        type="Submit" 
+        value = "Submit"
+        class = "btn btn-lg btn-primary btn-block"
+        )
+

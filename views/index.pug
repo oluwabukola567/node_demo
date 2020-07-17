@@ -1,0 +1,22 @@
+doctype html
+html
+head
+
+title  Registration form
+link(rel='stylesheet', href='/css/bootstrap.min.css')
+link(rel='stylesheet', href='styles.css')
+
+body
+    div.container.listing-reg
+h1 My Awesome App
+if registrations.length
+    table.listing-table.table-light.table-striped
+        tr
+            th Name
+            th Email
+        each registration in registrations
+            tr
+                td= registration.name
+                td= registration.email
+else
+    p No registrations yet :(
